@@ -37,7 +37,58 @@ from random_agent.ai_integration import (
     create_ai_agent,
 )
 
-__version__ = "0.1.0"
+from random_agent.config import (
+    RandomAgentConfig,
+    ConfigManager,
+    load_config,
+    RandomnessConfig,
+    MemoryConfig,
+    ConsciousnessConfig,
+    PersonalityConfig,
+    AIProviderConfig,
+    LoggingConfig,
+)
+
+from random_agent.logger import (
+    RandomAgentLogger,
+    setup_logging,
+    get_logger,
+    track_performance,
+)
+
+from random_agent.exceptions import (
+    RandomAgentError,
+    ConfigurationError,
+    RandomnessError,
+    MemoryError,
+    ConsciousnessError,
+    AIProviderError,
+    PromptError,
+    ValidationError,
+    StorageError,
+    PerformanceError,
+    handle_errors,
+)
+
+from random_agent.cache import (
+    LRUCache,
+    PromptCache,
+    MemoryCache,
+    cached,
+    get_prompt_cache,
+    get_memory_cache,
+)
+
+from random_agent.storage import (
+    JSONStorage,
+    SQLiteStorage,
+    SessionManager,
+    Session,
+    export_session,
+    import_session,
+)
+
+__version__ = "0.1.1"
 __all__ = [
     # Core modules
     "RandomnessEngine",
@@ -63,4 +114,45 @@ __all__ = [
     "AIProvider",
     "AIProviderBase",
     "create_ai_agent",
+    # Configuration
+    "RandomAgentConfig",
+    "ConfigManager",
+    "load_config",
+    "RandomnessConfig",
+    "MemoryConfig",
+    "ConsciousnessConfig",
+    "PersonalityConfig",
+    "AIProviderConfig",
+    "LoggingConfig",
+    # Logging
+    "RandomAgentLogger",
+    "setup_logging",
+    "get_logger",
+    "track_performance",
+    # Exceptions
+    "RandomAgentError",
+    "ConfigurationError",
+    "RandomnessError",
+    "MemoryError",
+    "ConsciousnessError",
+    "AIProviderError",
+    "PromptError",
+    "ValidationError",
+    "StorageError",
+    "PerformanceError",
+    "handle_errors",
+    # Cache
+    "LRUCache",
+    "PromptCache",
+    "MemoryCache",
+    "cached",
+    "get_prompt_cache",
+    "get_memory_cache",
+    # Storage
+    "JSONStorage",
+    "SQLiteStorage",
+    "SessionManager",
+    "Session",
+    "export_session",
+    "import_session",
 ]
