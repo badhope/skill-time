@@ -88,7 +88,43 @@ from random_agent.storage import (
     import_session,
 )
 
-__version__ = "0.1.1"
+from random_agent.async_support import (
+    AsyncManager,
+    AsyncCache,
+    AsyncTaskQueue,
+    async_retry,
+    async_timeout,
+    sync_to_async,
+    async_to_sync,
+    get_async_manager,
+)
+
+from random_agent.monitoring import (
+    MetricsCollector,
+    SystemMonitor,
+    PerformanceTracker,
+    AlertManager,
+    PerformanceReporter,
+    get_metrics_collector,
+    get_system_monitor,
+    get_performance_tracker,
+    record_metric,
+    track_performance as monitor_track_performance,
+)
+
+from random_agent.extended_providers import (
+    ExtendedAIProvider,
+    GoogleProvider,
+    CohereProvider,
+    AzureOpenAIProvider,
+    HuggingFaceProvider,
+    TogetherProvider,
+    ReplicateProvider,
+    ExtendedAIProviderFactory,
+    create_extended_ai_agent,
+)
+
+__version__ = "0.2.0"
 __all__ = [
     # Core modules
     "RandomnessEngine",
@@ -155,4 +191,34 @@ __all__ = [
     "Session",
     "export_session",
     "import_session",
+    # Async Support
+    "AsyncManager",
+    "AsyncCache",
+    "AsyncTaskQueue",
+    "async_retry",
+    "async_timeout",
+    "sync_to_async",
+    "async_to_sync",
+    "get_async_manager",
+    # Monitoring
+    "MetricsCollector",
+    "SystemMonitor",
+    "PerformanceTracker",
+    "AlertManager",
+    "PerformanceReporter",
+    "get_metrics_collector",
+    "get_system_monitor",
+    "get_performance_tracker",
+    "record_metric",
+    "monitor_track_performance",
+    # Extended Providers
+    "ExtendedAIProvider",
+    "GoogleProvider",
+    "CohereProvider",
+    "AzureOpenAIProvider",
+    "HuggingFaceProvider",
+    "TogetherProvider",
+    "ReplicateProvider",
+    "ExtendedAIProviderFactory",
+    "create_extended_ai_agent",
 ]

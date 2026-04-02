@@ -1,0 +1,42 @@
+# RandomAgent 核心依赖
+# 安装: pip install -r requirements.txt
+
+# 基础依赖
+python-dotenv>=1.0.0
+pyyaml>=6.0
+
+# 性能监控
+psutil>=5.9.0
+
+# AI 提供商 (可选，根据需要安装)
+# OpenAI
+# openai>=1.0.0
+
+# Anthropic Claude
+# anthropic>=0.18.0
+
+# Google PaLM / Gemini
+# google-generativeai>=0.3.0
+
+# Cohere
+# cohere>=4.0.0
+
+# Hugging Face
+# huggingface-hub>=0.20.0
+
+# Replicate
+# replicate>=0.20.0
+
+# 开发依赖 (可选)
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# pytest-asyncio>=0.21.0
+# black>=23.0.0
+# isort>=5.12.0
+# flake8>=6.0.0
+# mypy>=1.0.0
+
+# 文档生成 (可选)
+# sphinx>=6.0.0
+# sphinx-rtd-theme>=1.2.0
+# sphinx-autodoc-typehints>=1.22.0
