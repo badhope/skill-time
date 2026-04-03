@@ -124,7 +124,16 @@ from random_agent.extended_providers import (
     create_extended_ai_agent,
 )
 
-__version__ = "0.2.0"
+from random_agent.templates import (
+    TEMPLATES,
+    get_template,
+    list_templates,
+    list_categories,
+    get_template_for_task,
+    apply_template,
+)
+
+__version__ = "0.3.0"
 __all__ = [
     # Core modules
     "RandomnessEngine",
@@ -221,4 +230,11 @@ __all__ = [
     "ReplicateProvider",
     "ExtendedAIProviderFactory",
     "create_extended_ai_agent",
+    # Templates
+    "TEMPLATES",
+    "get_template",
+    "list_templates",
+    "list_categories",
+    "get_template_for_task",
+    "apply_template",
 ]

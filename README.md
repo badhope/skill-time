@@ -4,6 +4,18 @@
 
 核心理念：**世界的底层是随机的，大脑的底层也是随机的**
 
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-0.3.0-green.svg)](https://github.com/yourusername/random-agent)
+
+## ✨ v0.3.0 新特性
+
+- 🎉 **CLI 命令行工具** - 无需编程，一行命令即可使用
+- 📋 **16 个预设模板** - 覆盖内容创作、问题解决、学习研究等场景
+- 🚀 **一键启动脚本** - 双击即用，自动配置
+- 🤖 **智能推荐** - 根据任务自动匹配最佳模板
+- 🌍 **全中文界面** - 友好的用户体验
+
 ## 🎯 项目定位
 
 RandomAgent 是一个**提示词工程框架**，提供：
@@ -11,8 +23,27 @@ RandomAgent 是一个**提示词工程框架**，提供：
 1. **提示词模板** - 生成可直接使用的系统提示词
 2. **AI 集成** - 调用真实的 AI 模型（OpenAI/Claude/Ollama）
 3. **思维模拟** - 模拟人类意识流和随机思维过程
+4. **CLI 工具** - 命令行界面，无需编程即可使用
+5. **预设模板** - 开箱即用的场景配置
 
 ## 📦 安装
+
+### 方式一：一键启动（推荐新手）
+
+**Windows 用户：**
+```bash
+# 双击 start.bat 即可启动
+# 或在命令行运行：
+start.bat
+```
+
+**Linux/Mac 用户：**
+```bash
+chmod +x start.sh
+./start.sh
+```
+
+### 方式二：命令行安装
 
 ```bash
 # 从源码安装
@@ -26,9 +57,43 @@ pip install -e ".[anthropic]"   # Claude 支持
 pip install -e ".[all]"         # 所有支持
 ```
 
+### 方式三：直接使用 CLI（安装后）
+
+```bash
+# 查看帮助
+random-agent --help
+
+# 首次使用：配置向导
+random-agent setup
+
+# 效果演示
+random-agent demo
+```
+
 ## 🚀 快速开始
 
-### 1. 生成提示词
+### 方式一：CLI 命令行（推荐，无需编程）
+
+```bash
+# 1. 生成提示词（使用预设模板）
+random-agent generate "写一首关于春天的诗" --template creative_writing
+
+# 2. 头脑风暴
+random-agent generate "如何提高团队效率？" --template brainstorming
+
+# 3. 与 AI 对话（需要 Ollama 或 API Key）
+random-agent chat --provider ollama --model llama2
+
+# 4. 交互式模式（推荐新手）
+random-agent interactive
+
+# 5. 查看所有可用模板
+random-agent templates
+```
+
+### 方式二：Python 编程调用
+
+#### 1. 生成提示词
 
 ```python
 from random_agent import create_prompt
@@ -120,6 +185,65 @@ print(result["answer"])
 | `balanced` | 平衡思维 | 一般问题（默认） |
 | `creative` | 创造性思维 | 艺术创作、创新设计 |
 | `analytical` | 分析性思维 | 逻辑推理、数据分析 |
+
+## 📋 预设模板（v0.3.0 新增）
+
+RandomAgent 提供 **16 个开箱即用** 的预设模板，覆盖 5 大类别：
+
+### 📝 内容创作（4个）
+
+| 模板名称 | 说明 | 示例命令 |
+|----------|------|----------|
+| `creative_writing` | 创意写作（小说、诗歌） | `random-agent generate "写一首诗" --template creative_writing` |
+| `copywriting` | 营销文案（广告、推广） | `random-agent generate "产品描述" --template copywriting` |
+| `blog_post` | 博客文章（技术、个人） | `random-agent generate "AI教程" --template blog_post` |
+| `social_media` | 社交媒体（微博、小红书） | `random-agent generate "推文" --template social_media` |
+
+### 💡 问题解决（3个）
+
+| 模板名称 | 说明 | 适用场景 |
+|----------|------|----------|
+| `brainstorming` | 头脑风暴 | 创意生成、方案探索 |
+| `problem_solving` | 问题分析 | 系统性分析复杂问题 |
+| `decision_making` | 决策辅助 | 权衡利弊、做出选择 |
+
+### 📚 学习研究（3个）
+
+| 模板名称 | 说明 | 适用场景 |
+|----------|------|----------|
+| `learning_explanation` | 概念解释 | 教学式说明复杂概念 |
+| `research_assistant` | 研究助手 | 学术研究、文献综述 |
+| `idea_development` | 想法深化 | 完善初步想法为完整方案 |
+
+### 🌟 日常生活（3个）
+
+| 模板名称 | 说明 | 适用场景 |
+|----------|------|----------|
+| `daily_chat` | 日常聊天 | 有趣的对话交流 |
+| `life_advice` | 生活建议 | 人生指导和建议 |
+| `creative_inspiration` | 创意灵感 | 灵感激发和联想 |
+
+### 💼 专业领域（3个）
+
+| 模板名称 | 说明 | 适用场景 |
+|----------|------|----------|
+| `business_strategy` | 商业策略 | 战略规划和市场分析 |
+| `code_review` | 代码审查 | 编程辅助和代码优化 |
+| `interview_prep` | 面试准备 | 求职面试准备 |
+
+**查看所有模板：**
+```bash
+random-agent templates
+```
+
+**智能推荐（自动匹配最佳模板）：**
+```python
+from random_agent import get_template_for_task
+
+# 根据任务描述自动推荐
+recommended = get_template_for_task("帮我写一首关于春天的诗")
+# 返回: creative_writing 模板
+```
 
 ## 🔧 高级用法
 
@@ -215,20 +339,72 @@ random_agent/
 │   ├── balance_controller.py # 平衡控制器
 │   └── output_system.py     # 输出系统
 ├── prompt_templates.py      # 提示词模板
+├── templates.py             # 预设场景模板 (v0.3.0)
+├── cli.py                   # 命令行工具 (v0.3.0)
 ├── ai_integration.py        # AI API 集成
+├── config.py                # 配置管理
+├── logger.py                # 日志系统
+├── exceptions.py            # 异常处理
+├── monitoring.py            # 性能监控
+├── async_support.py         # 异步支持
+├── extended_providers.py    # 扩展 AI 提供商
 └── agent.py                 # 主 Agent 类
+
+# 启动脚本
+start.bat                    # Windows 一键启动
+start.sh                     # Linux/Mac 一键启动
 
 examples/
 ├── developer_guide.py       # 开发者指南
-└── example_usage.py         # 使用示例
+├── example_usage.py         # 使用示例
+├── ai_integration_demo.py   # AI 集成演示
+└── core_principle_demo.py   # 核心原理演示
+
+tests/
+└── test_*.py               # 测试文件
 ```
 
 ## 🤝 使用场景
+
+### 适合谁用？
+
+| 用户类型 | 使用方式 | 推荐功能 |
+|----------|----------|----------|
+| 👩‍💻 **内容创作者** | 写文案、创作内容 | `--template copywriting` / `creative_writing` |
+| 🎓 **学生** | 学习概念、写论文 | `--template learning_explanation` |
+| 💼 **职场人士** | 头脑风暴、做决策 | `--template brainstorming` / `decision_making` |
+| 🔧 **开发者** | 代码审查、技术方案 | `--template code_review` / Python API |
+| 👨‍🏫 **教师** | 教学备课、解释概念 | `--template learning_explanation` |
+| 📱 **社交媒体运营** | 写推文、发小红书 | `--template social_media` |
+
+### 典型应用
 
 1. **提示词工程师** - 生成创新的系统提示词
 2. **AI 应用开发者** - 集成到现有项目中
 3. **研究者** - 研究随机性在 AI 思维中的作用
 4. **创意工作者** - 获得不同寻常的 AI 回答
+5. **普通用户** - 通过 CLI 快速获得 AI 帮助（v0.3.0 新增）
+
+## 📊 版本历史
+
+### v0.3.0 (2026-04-03) - 用户体验全面优化
+- ✅ 新增 CLI 命令行工具
+- ✅ 新增 16 个预设场景模板
+- ✅ 新增一键启动脚本 (start.bat / start.sh)
+- ✅ 新增智能模板推荐系统
+- ✅ 全中文界面和错误提示
+
+### v0.2.0 - 功能扩展
+- ✅ 异步支持系统
+- ✅ 性能监控模块
+- ✅ 扩展 AI 提供商（Google、Cohere、Azure 等）
+- ✅ CI/CD 流水线配置
+
+### v0.1.1 - 基础版本
+- ✅ 核心随机引擎
+- ✅ 意识层次系统
+- ✅ DMN 引擎
+- ✅ OpenAI/Claude/Ollama 集成
 
 ## 📄 License
 
