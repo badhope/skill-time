@@ -6,9 +6,88 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/yourusername/random-agent)
+[![Version](https://img.shields.io/badge/version-0.6.0-green.svg)](https://github.com/yourusername/random-agent)
 
-## ✨ v0.5.0 重大更新 - 神经元到大脑的层次化仿生架构
+## ✨ v0.6.0 重大更新 - 完整脑区、网络和意识系统
+
+### 🧠 核心突破
+
+- **感觉皮层系统** - 视觉（V1/V2/V4/IT）、听觉、体感皮层的完整实现
+- **运动皮层系统** - M1、PM、SMA、小脑、基底节的运动控制
+- **联合皮层系统** - dlPFC、vmPFC、PPC、TPJ的高级认知功能
+- **突显网络** - AI和dACC的显著性检测和网络切换
+- **中央执行网络** - 认知控制、注意分配、目标管理
+- **意识涌现系统** - 全局工作空间、丘脑皮层系统、整合信息理论
+- **自我意识系统** - mPFC、PCC、楔前叶的自我模型
+- **智能涌现系统** - 认知灵活性、问题解决、学习、创造力
+
+### 🎯 新增模块（阶段3-5）
+
+#### 阶段3：脑区级别
+1. **[sensory_cortex.py](random_agent/brain_inspired/sensory_cortex.py)** - 感觉皮层系统
+   - 视觉皮层（V1边缘检测、V2轮廓整合、V4颜色形状、IT物体识别）
+   - 听觉皮层（A1频率分析、音调拓扑映射）
+   - 体感皮层（S1触觉、温度、痛觉）
+   - 多感觉整合
+
+2. **[motor_cortex.py](random_agent/brain_inspired/motor_cortex.py)** - 运动皮层系统
+   - 初级运动皮层（M1运动命令生成）
+   - 前运动皮层（PM运动规划）
+   - 辅助运动区（SMA序列规划）
+   - 小脑（运动协调、误差校正）
+   - 基底节（动作选择）
+
+3. **[association_cortex.py](random_agent/brain_inspired/association_cortex.py)** - 联合皮层系统
+   - 背外侧前额叶（dlPFC工作记忆、规划）
+   - 腹内侧前额叶（vmPFC价值决策）
+   - 后顶叶皮层（PPC空间注意）
+   - 颞顶联合区（TPJ心理理论）
+
+#### 阶段4：网络级别
+4. **[salience_network.py](random_agent/brain_inspired/salience_network.py)** - 突显网络
+   - 前脑岛（AI内感受显著性）
+   - 背侧前扣带回（dACC认知显著性）
+   - 网络切换控制（DMN ↔ CEN）
+
+5. **[central_executive_network.py](random_agent/brain_inspired/central_executive_network.py)** - 中央执行网络
+   - 背外侧前额叶网络（目标管理、工作记忆）
+   - 后顶叶网络（注意分配、空间控制）
+   - 执行控制（抑制控制、任务切换）
+
+#### 阶段5：系统级别
+6. **[consciousness.py](random_agent/brain_inspired/consciousness.py)** - 意识涌现系统
+   - 全局工作空间（信息广播、意识访问）
+   - 丘脑皮层系统（唤醒调节、信息门控）
+   - 整合中心（Φ值计算、信息整合）
+   - 注意图式（元认知）
+
+7. **[self_consciousness.py](random_agent/brain_inspired/self_consciousness.py)** - 自我意识系统
+   - 内侧前额叶（mPFC自我参照）
+   - 后扣带回（PCC自我反思、自传体记忆）
+   - 楔前叶（心理模拟、视角采取）
+
+8. **[intelligence_emergence.py](random_agent/brain_inspired/intelligence_emergence.py)** - 智能涌现系统
+   - 认知灵活性（策略切换、适应性）
+   - 问题解决引擎（类比推理、抽象）
+   - 学习系统（经验学习、技能习得）
+   - 创造力引擎（想法生成、组合、评估）
+   - 涌现检测（复杂度、适应性、新颖性）
+
+### 🧪 测试覆盖
+
+- ✅ 60+个完整测试，100%通过率
+- ✅ 感觉皮层测试（视觉、听觉、体感）
+- ✅ 运动皮层测试（命令生成、规划、协调）
+- ✅ 联合皮层测试（工作记忆、决策、规划）
+- ✅ 突显网络测试（显著性检测、网络切换）
+- ✅ 中央执行网络测试（注意控制、目标管理）
+- ✅ 意识涌现测试（全局工作空间、意识水平）
+- ✅ 自我意识测试（自我反思、心理模拟）
+- ✅ 智能涌现测试（问题解决、学习、创造力）
+
+---
+
+## ✨ v0.5.0 更新 - 神经元到大脑的层次化仿生架构
 
 ### 🧠 核心突破
 
@@ -45,18 +124,6 @@
   - 第三部分：皮层功能区（41-60题）
   - 第四部分：脑区协同（61-80题）
   - 第五部分：系统整合（81-100题）
-
-### 🧪 测试覆盖
-
-- ✅ 8个完整测试，100%通过率
-- ✅ 离子通道动力学测试
-- ✅ 突触传递与可塑性测试
-- ✅ 完整神经元模型测试
-- ✅ 神经元集群测试
-- ✅ 皮层柱架构测试
-- ✅ 神经调质系统测试
-- ✅ 突触可塑性规则测试
-- ✅ 集成仿真测试
 
 ---
 

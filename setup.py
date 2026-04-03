@@ -22,7 +22,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="random-agent",
-    version="0.5.0",
+    version="0.6.0",
     author="RandomAgent Team",
     author_email="",
     description="模拟人类直觉跳跃思维的智能体框架 - 提示词工程",
