@@ -6,7 +6,59 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-0.3.0-green.svg)](https://github.com/yourusername/random-agent)
+[![Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/yourusername/random-agent)
+
+## ✨ v0.5.0 重大更新 - 神经元到大脑的层次化仿生架构
+
+### 🧠 核心突破
+
+- **神经元级别仿真** - 基于Hodgkin-Huxley方程的精确离子通道建模
+- **突触可塑性** - STDP、Hebbian学习、神经调质调制
+- **皮层柱架构** - 完整的6层皮层结构，包含微柱和超柱
+- **神经调质系统** - 多巴胺、乙酰胆碱、血清素、去甲肾上腺素
+- **100个专业问题设计** - 从神经元到意识的完整设计文档
+
+### 🎯 新增模块
+
+1. **[neuron.py](random_agent/brain_inspired/neuron.py)** - 神经元计算模型
+   - 离子通道动力学（Na⁺、K⁺、Ca²⁺）
+   - 突触传递（AMPA、NMDA、GABA受体）
+   - 树突计算、轴突传导
+   - 神经元代谢系统
+
+2. **[ensemble.py](random_agent/brain_inspired/ensemble.py)** - 神经元集群与皮层柱
+   - 神经元集群（模式识别、吸引子网络）
+   - 皮层分层（I-VI层）
+   - 皮层柱、微柱、超柱
+
+3. **[neuromodulation.py](random_agent/brain_inspired/neuromodulation.py)** - 神经调质系统
+   - 多巴胺系统（奖励预测、动机调节）
+   - 乙酰胆碱系统（注意力调节）
+   - 血清素系统（情绪调节）
+   - 去甲肾上腺素系统（唤醒调节）
+
+### 📚 设计文档
+
+- **[NEURON_TO_BRAIN_DESIGN.md](NEURON_TO_BRAIN_DESIGN.md)** - 100个专业问题的深度设计
+  - 第一部分：神经元计算基础（1-20题）
+  - 第二部分：神经元集群与微电路（21-40题）
+  - 第三部分：皮层功能区（41-60题）
+  - 第四部分：脑区协同（61-80题）
+  - 第五部分：系统整合（81-100题）
+
+### 🧪 测试覆盖
+
+- ✅ 8个完整测试，100%通过率
+- ✅ 离子通道动力学测试
+- ✅ 突触传递与可塑性测试
+- ✅ 完整神经元模型测试
+- ✅ 神经元集群测试
+- ✅ 皮层柱架构测试
+- ✅ 神经调质系统测试
+- ✅ 突触可塑性规则测试
+- ✅ 集成仿真测试
+
+---
 
 ## ✨ v0.3.0 新特性
 
