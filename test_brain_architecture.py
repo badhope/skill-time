@@ -37,8 +37,8 @@ class TestPerceptualSystem(unittest.TestCase):
         result = self.perceptual_system.process(raw_input)
         
         self.assertIsNotNone(result)
-        self hasattr(result, 'semantic_features')
-        self hasattr(result, 'structural_features')
+        self.assertTrue(hasattr(result, 'semantic_features'))
+        self.assertTrue(hasattr(result, 'structural_features'))
         self.assertGreater(result.salience, 0)
     
     def test_feature_extraction(self):

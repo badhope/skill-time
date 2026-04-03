@@ -302,7 +302,7 @@ def test_setup_py():
     with open(setup_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    assert '0.3.0' in content, 'setup.py 版本号未更新'
+    assert '0.5.0' in content, 'setup.py 版本号未更新'
     assert 'console_scripts' in content, '缺少 CLI 入口点配置'
     assert 'random-agent=random_agent.cli:main' in content, 'CLI 命令未注册'
 test('setup.py 配置正确', test_setup_py)
@@ -314,7 +314,7 @@ def test_readme_exists():
     with open(readme_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    assert 'v0.3.0' in content, 'README 未提及 v0.3.0'
+    assert 'v0.5.0' in content, 'README 未提及 v0.5.0'
     assert 'CLI' in content or '命令行' in content, 'README 缺少 CLI 说明'
     assert 'template' in content.lower() or '模板' in content, 'README 缺少模板说明'
 test('README.md 存在且包含关键信息', test_readme_exists)
