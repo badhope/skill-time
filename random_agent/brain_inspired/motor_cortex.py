@@ -369,7 +369,9 @@ class BasalGangliaMotor:
     
     def inhibit_competing_actions(self, selected_action: str, all_actions: List[str]):
         """抑制竞争动作"""
-        pass
+        for action in all_actions:
+            if action != selected_action:
+                self.indirect_pathway.enhance_inhibition(action)
 
 
 class DirectPathway:
@@ -390,12 +392,25 @@ class IndirectPathway:
     
     def __init__(self):
         self.weights = np.random.rand(10)
+        self.inhibition_strength = {}
         
     def compute_inhibition(self, actions: List[str]) -> np.ndarray:
         """计算抑制"""
         n_actions = len(actions)
         inhibition = np.random.rand(n_actions) * 0.3
+        
+        for i, action in enumerate(actions):
+            if action in self.inhibition_strength:
+                inhibition[i] += self.inhibition_strength[action]
+                
         return inhibition
+    
+    def enhance_inhibition(self, action: str, strength: float = 0.2):
+        """增强对特定动作的抑制"""
+        if action in self.inhibition_strength:
+            self.inhibition_strength[action] += strength
+        else:
+            self.inhibition_strength[action] = strength
 
 
 class ActionSelection:

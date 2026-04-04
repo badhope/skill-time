@@ -437,7 +437,12 @@ class SelfConsciousnessSystem:
             self.self_model.traits.update(state.get('traits', {}))
         
         if 'memory_state' in pcc_result:
-            pass
+            memory_state = pcc_result['memory_state']
+            if isinstance(memory_state, dict):
+                if 'autobiographical' in memory_state:
+                    self.self_model.autobiographical_memories.extend(
+                        memory_state['autobiographical']
+                    )
     
     def _compute_coherence(self) -> float:
         """计算一致性"""
