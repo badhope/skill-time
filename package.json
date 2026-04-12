@@ -1,0 +1,40 @@
+{
+  "name": "@randomskill/core",
+  "version": "2.0.0",
+  "description": "Neurodynamically accurate human thinking simulation framework. World's first LLM cognitive architecture based on computational neuroscience.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node testing/v2.0_neurodynamics_test.js",
+    "test:v1": "node testing/run_distribution_test.js",
+    "seed": "node skills/random-thinking/scripts/random_picker.js v2",
+    "build:mcp": "cd mcp-server && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badhope/Random-Skill.git"
+  },
+  "keywords": [
+    "cognitive-science",
+    "neuroscience",
+    "llm",
+    "agent",
+    "randomness",
+    "pareto",
+    "levy-flight",
+    "power-law",
+    "mcp",
+    "model-context-protocol",
+    "dmn",
+    "default-mode-network",
+    "bistability",
+    "skill",
+    "anthropic"
+  ],
+  "author": "RandomSkill Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/badhope/Random-Skill/issues"
+  },
+  "homepage": "https://github.com/badhope/Random-Skill#readme"
+}
